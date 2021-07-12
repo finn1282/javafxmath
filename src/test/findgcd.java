@@ -9,20 +9,17 @@ public class findgcd {
     private static int inputlength;
 
     public static int calgcd(String input) {
-        int result = 0;
+        int gcd = 1;
         List<Integer> intList = getar(input);
         for (int i = 0; i<(inputlength-1); i++){
-            int a1 = intList.get(i);
-            int a2 = intList.get(i + 1);
-            while(a1 !=  a2) {
-                if(a1 > a2)
-                    a1 = a1- a2;
-                else
-                    a2 = a2 - a1;
+            int a1 = intList.get(i),  a2 = intList.get(i + 1);
+            for(int is = 1; is <= a1 && is <= a2; is++)
+            {
+                if(a1%is==0 && a2%is==0)
+                gcd = is;
             }
-            result = a2;
         }
-        return result;
+        return gcd;
     }
 
     public static List<Integer> getar(String input) {

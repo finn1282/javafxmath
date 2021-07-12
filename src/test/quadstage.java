@@ -10,7 +10,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import static test.gradientstage.ShowGraph;
 
 public class quadstage extends Stage {
     private static double a;
@@ -23,8 +22,10 @@ public class quadstage extends Stage {
         public static ObservableList<String> options = 
         FXCollections.observableArrayList(
         "Calculate Points",
+        "Calculate LCM",
         "Calculate GCD",
-        "Calculate Quadratic Equations"
+        "Calculate Quadratic Equations",
+        "Calculate Simultaneous Equations"
     );
     public static ComboBox comboboxquad = new ComboBox(options);
     
@@ -47,8 +48,6 @@ public class quadstage extends Stage {
 
         Button Calculate = new Button("Calculate");
         quadinputsbox.add(Calculate, 1, 4);
-        quadinputsbox.add(ShowGraph, 2, 4);
-        ShowGraph.setVisible(false);
 
         quadoutputsbox.add(new Label("Result:"), 0, 0);
         quadoutputsbox.add(new Label("or"), 1, 1);

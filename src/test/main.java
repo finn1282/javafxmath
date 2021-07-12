@@ -9,8 +9,10 @@ public class main extends Application{
 
     private static final Scene gradientscene = gradientstage.showstage();
     private static final Scene graphscene = graphstage.showstage();
+    private static final Scene lcmscene = lcmstage.showstage();
     private static final Scene gcdscene = gcdstage.showstage();
     private static final Scene quadscene = quadstage.showstage();
+    private static final Scene simeqscene = simeqstage.showstage();
     private static int[] xarray = gradientstage.xarray;
     private static int[] yarray = gradientstage.yarray;
     private static XYChart.Series series = graphstage.series;
@@ -49,8 +51,12 @@ public class main extends Application{
                 primaryStage.setScene(gradientscene);
             } else if (selected == "Calculate GCD") {
                 primaryStage.setScene(gcdscene);
+            } else if (selected == "Calculate LCM") {
+                primaryStage.setScene(lcmscene);
             } else if (selected == "Calculate Quadratic Equations") {
                 primaryStage.setScene(quadscene);
+            } else if (selected == "Calculate Simultaneous Equations") {
+                primaryStage.setScene(simeqscene);
             }
         });
         gradientstage.selectgradientbutton.setOnAction(e -> {
@@ -59,8 +65,12 @@ public class main extends Application{
                 primaryStage.setScene(gradientscene);
             } else if (selected == "Calculate GCD") {
                 primaryStage.setScene(gcdscene);
+            } else if (selected == "Calculate LCM") {
+                primaryStage.setScene(lcmscene);
             } else if (selected == "Calculate Quadratic Equations") {
                 primaryStage.setScene(quadscene);
+            } else if (selected == "Calculate Simultaneous Equations") {
+                primaryStage.setScene(simeqscene);
             }
         });
         quadstage.selectquadbutton.setOnAction(e -> {
@@ -69,19 +79,54 @@ public class main extends Application{
                 primaryStage.setScene(gradientscene);
             } else if (selected == "Calculate GCD") {
                 primaryStage.setScene(gcdscene);
+            } else if (selected == "Calculate LCM") {
+                primaryStage.setScene(lcmscene);
             } else if (selected == "Calculate Quadratic Equations") {
                 primaryStage.setScene(quadscene);
+            } else if (selected == "Calculate Simultaneous Equations") {
+                primaryStage.setScene(simeqscene);
             }
         });
+        lcmstage.selectlcmbutton.setOnAction(e -> {
+            String selected = (String) lcmstage.comboboxlcm.getValue();
+            if (selected == "Calculate Points") {
+                primaryStage.setScene(gradientscene);
+            } else if (selected == "Calculate GCD") {
+                primaryStage.setScene(gcdscene);
+            } else if (selected == "Calculate LCM") {
+                primaryStage.setScene(lcmscene);
+            } else if (selected == "Calculate Quadratic Equations") {
+                primaryStage.setScene(quadscene);
+            } else if (selected == "Calculate Simultaneous Equations") {
+                primaryStage.setScene(simeqscene);
+            }
+        });
+        simeqstage.selectsimeqbutton.setOnAction(e -> {
+            String selected = (String) simeqstage.comboboxsimeq.getValue();
+            if (selected == "Calculate Points") {
+                primaryStage.setScene(gradientscene);
+            } else if (selected == "Calculate GCD") {
+                primaryStage.setScene(gcdscene);
+            } else if (selected == "Calculate LCM") {
+                primaryStage.setScene(lcmscene);
+            } else if (selected == "Calculate Quadratic Equations") {
+                primaryStage.setScene(quadscene);
+            } else if (selected == "Calculate Simultaneous Equations") {
+                primaryStage.setScene(simeqscene);
+            }
+        });
+
 
         primaryStage.setScene(gradientscene);
         primaryStage.show();
     }
 }
 
-// gcdstage, gradientstage, quadstage
+// gcdstage, gradientstage, quadstage, lcmstage, simeqstage
 /*
     "Calculate Points",
+    "Calculate LCM",
     "Calculate GCD",
     "Calculate Quadratic Equations"
+    "Calculate Simultaneous Equations"
 */

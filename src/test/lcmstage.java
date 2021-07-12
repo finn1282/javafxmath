@@ -11,11 +11,11 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
 
-public class gcdstage {
-    private static GridPane gcdinputbox = new GridPane();
-    private static GridPane gcdoutputbox = new GridPane();
-    private static GridPane gcderrorbox = new GridPane();
-    public static Button selectgcdbutton = new Button("Select");
+public class lcmstage {
+    private static GridPane lcminputbox = new GridPane();
+    private static GridPane lcmoutputbox = new GridPane();
+    private static GridPane lcmerrorbox = new GridPane();
+    public static Button selectlcmbutton = new Button("Select");
     public static ObservableList<String> options = 
         FXCollections.observableArrayList(
         "Calculate Points",
@@ -24,33 +24,33 @@ public class gcdstage {
         "Calculate Quadratic Equations",
         "Calculate Simultaneous Equations"
     );
-    public static ComboBox comboboxgcd = new ComboBox(options);
+    public static ComboBox comboboxlcm = new ComboBox(options);
     
     public static Scene showstage() {
-        gcdinputbox.add(new Label("Input:"), 0, 0);
+        lcminputbox.add(new Label("Input:"), 0, 0);
         TextField input = new TextField();
-        gcdinputbox.add(input, 1, 0);
+        lcminputbox.add(input, 1, 0);
         input.setPromptText("e.g. 1, 2, 3, 4");
         input.getParent().requestFocus();
         Button Calculate = new Button("Calculate");
-        gcdinputbox.add(Calculate, 1, 1);
+        lcminputbox.add(Calculate, 1, 1);
         
-        gcdoutputbox.add(new Label("GCD:"), 0, 0);
+        lcmoutputbox.add(new Label("LCM:"), 0, 0);
         TextField result = new TextField();
-        gcdoutputbox.add(result, 1, 0);
+        lcmoutputbox.add(result, 1, 0);
         result.setEditable(false);
         
         Label error = new Label();
         Label errorresult = new Label();
-        gcderrorbox.add(error, 0, 0);
-        gcderrorbox.add(errorresult, 1, 0);
+        lcmerrorbox.add(error, 0, 0);
+        lcmerrorbox.add(errorresult, 1, 0);
         
         Calculate.setOnAction(e -> {
            try{
                error.setText(" ");
                errorresult.setText(" ");
                String inputs = input.getText();
-               result.setText(String.valueOf(findgcd.calgcd(inputs)));
+               result.setText(String.valueOf(findlcm.callcm(inputs)));
            } catch(Exception er) {
                System.out.println("smtg went wrong gcd");
                result.setText(" ");
@@ -68,12 +68,12 @@ public class gcdstage {
         });
         
         GridPane selections = new GridPane();
-        comboboxgcd.getSelectionModel().selectFirst();
-        selections.add(comboboxgcd, 0, 0);
-        selections.add(selectgcdbutton, 1, 0);
-        VBox gcd = new VBox();
-        gcd.getChildren().addAll(gcdinputbox, gcdoutputbox, gcderrorbox, selections);
-        Scene GCD = new Scene(gcd);
-        return GCD;
+        comboboxlcm.getSelectionModel().selectFirst();
+        selections.add(comboboxlcm, 0, 0);
+        selections.add(selectlcmbutton, 1, 0);
+        VBox lcm = new VBox();
+        lcm.getChildren().addAll(lcminputbox, lcmoutputbox, lcmerrorbox, selections);
+        Scene LCM = new Scene(lcm);
+        return LCM;
     }
 }

@@ -13,6 +13,7 @@ public class main extends Application{
     private static final Scene gcdscene = gcdstage.showstage();
     private static final Scene quadscene = quadstage.showstage();
     private static final Scene simeqscene = simeqstage.showstage();
+    private static final Scene indicescene = indicestage.showstage();
     private static int[] xarray = gradientstage.xarray;
     private static int[] yarray = gradientstage.yarray;
     private static XYChart.Series series = graphstage.series;
@@ -57,6 +58,8 @@ public class main extends Application{
                 primaryStage.setScene(quadscene);
             } else if (selected == "Calculate Simultaneous Equations") {
                 primaryStage.setScene(simeqscene);
+            } else if (selected == "Calculate Indice") {
+                primaryStage.setScene(indicescene);
             }
         });
         gradientstage.selectgradientbutton.setOnAction(e -> {
@@ -71,6 +74,8 @@ public class main extends Application{
                 primaryStage.setScene(quadscene);
             } else if (selected == "Calculate Simultaneous Equations") {
                 primaryStage.setScene(simeqscene);
+            } else if (selected == "Calculate Indice") {
+                primaryStage.setScene(indicescene);
             }
         });
         quadstage.selectquadbutton.setOnAction(e -> {
@@ -85,6 +90,8 @@ public class main extends Application{
                 primaryStage.setScene(quadscene);
             } else if (selected == "Calculate Simultaneous Equations") {
                 primaryStage.setScene(simeqscene);
+            } else if (selected == "Calculate Indice") {
+                primaryStage.setScene(indicescene);
             }
         });
         lcmstage.selectlcmbutton.setOnAction(e -> {
@@ -99,6 +106,8 @@ public class main extends Application{
                 primaryStage.setScene(quadscene);
             } else if (selected == "Calculate Simultaneous Equations") {
                 primaryStage.setScene(simeqscene);
+            } else if (selected == "Calculate Indice") {
+                primaryStage.setScene(indicescene);
             }
         });
         simeqstage.selectsimeqbutton.setOnAction(e -> {
@@ -113,6 +122,24 @@ public class main extends Application{
                 primaryStage.setScene(quadscene);
             } else if (selected == "Calculate Simultaneous Equations") {
                 primaryStage.setScene(simeqscene);
+            } else if (selected == "Calculate Indice") {
+                primaryStage.setScene(indicescene);
+            }
+        });
+        indicestage.selectindicebutton.setOnAction(e -> {
+            String selected = (String) indicestage.comboboxindice.getValue();
+            if (selected == "Calculate Points") {
+                primaryStage.setScene(gradientscene);
+            } else if (selected == "Calculate GCD") {
+                primaryStage.setScene(gcdscene);
+            } else if (selected == "Calculate LCM") {
+                primaryStage.setScene(lcmscene);
+            } else if (selected == "Calculate Quadratic Equations") {
+                primaryStage.setScene(quadscene);
+            } else if (selected == "Calculate Simultaneous Equations") {
+                primaryStage.setScene(simeqscene);
+            } else if (selected == "Calculate Indice") {
+                primaryStage.setScene(indicescene);
             }
         });
 
@@ -122,11 +149,12 @@ public class main extends Application{
     }
 }
 
-// gcdstage, gradientstage, quadstage, lcmstage, simeqstage
+// gcdstage, gradientstage, quadstage, lcmstage, simeqstage, indicestage
 /*
     "Calculate Points",
     "Calculate LCM",
     "Calculate GCD",
-    "Calculate Quadratic Equations"
-    "Calculate Simultaneous Equations"
+    "Calculate Quadratic Equations",
+    "Calculate Simultaneous Equations",
+    "Calculate Indice"
 */

@@ -1,0 +1,3 @@
+Permissions: sandbox
+Codebase: mathx.w3spaces.com
+Application-Name: test

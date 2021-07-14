@@ -33,7 +33,8 @@ public class gradientstage extends Stage {
         "Calculate LCM",
         "Calculate GCD",
         "Calculate Quadratic Equations",
-        "Calculate Simultaneous Equations"
+        "Calculate Simultaneous Equations",
+        "Calculate Indice"
     );
     public static ComboBox comboboxgradient = new ComboBox(options);
         

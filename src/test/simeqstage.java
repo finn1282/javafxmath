@@ -31,7 +31,8 @@ public class simeqstage extends Stage {
         "Calculate LCM",
         "Calculate GCD",
         "Calculate Quadratic Equations",
-        "Calculate Simultaneous Equations"
+        "Calculate Simultaneous Equations",
+        "Calculate Indice"
     );
     public static ComboBox comboboxsimeq = new ComboBox(options);
         
@@ -48,12 +49,12 @@ public class simeqstage extends Stage {
         TextField secondxValue = new TextField();
         TextField secondyValue = new TextField();
         TextField secondresultValue = new TextField();
-        firstxValue.setPromptText("e.g. ([x], y)");
-        firstyValue.setPromptText("e.g. (x, [y])");
-        firstresultValue.setPromptText("e.g. (x, [y])");
-        secondxValue.setPromptText("e.g. ([x], y)");
-        secondyValue.setPromptText("e.g. (x, [y])");
-        secondresultValue.setPromptText("e.g. (x, [y])");
+        firstxValue.setPromptText("e.g. []x+y=res");
+        firstyValue.setPromptText("e.g. x+[]y=res");
+        firstresultValue.setPromptText("e.g. x+y=[res]");
+        secondxValue.setPromptText("e.g. []x+y=res");
+        secondyValue.setPromptText("e.g. x+[]y=res");
+        secondresultValue.setPromptText("e.g. x+y=[res]");
         simeqinputsbox.add(firstxValue, 1, 0);
         simeqinputsbox.add(firstyValue, 1, 1);
         simeqinputsbox.add(firstresultValue, 1, 2);

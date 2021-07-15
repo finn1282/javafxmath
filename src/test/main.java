@@ -20,7 +20,9 @@ public class main extends Application{
     
 
     public static void main(String[] args) {
+        String input = "1, 4, 5, 7, 10, 3, 2, 2";
         launch(args);
+        System.out.println(getavrg.calmode(input));
     }
     
     @Override

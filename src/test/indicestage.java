@@ -30,7 +30,8 @@ public class indicestage extends Stage {
         "Calculate GCD",
         "Calculate Quadratic Equations",
         "Calculate Simultaneous Equations",
-        "Calculate Indice"
+        "Calculate Indice",
+        "Calculate Average"
     );
     public static ComboBox comboboxindice = new ComboBox(options);
         

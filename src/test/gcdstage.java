@@ -23,7 +23,8 @@ public class gcdstage {
         "Calculate GCD",
         "Calculate Quadratic Equations",
         "Calculate Simultaneous Equations",
-        "Calculate Indice"
+        "Calculate Indice",
+        "Calculate Average"
     );
     public static ComboBox comboboxgcd = new ComboBox(options);
     

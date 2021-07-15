@@ -25,14 +25,15 @@ public class simeqstage extends Stage {
     private static GridPane simeqoutputsbox = new GridPane();
     private static GridPane simeqerrorbox = new GridPane();
     public static Button selectsimeqbutton = new Button("Select");
-        public static ObservableList<String> options = 
+    public static ObservableList<String> options = 
         FXCollections.observableArrayList(
         "Calculate Points",
         "Calculate LCM",
         "Calculate GCD",
         "Calculate Quadratic Equations",
         "Calculate Simultaneous Equations",
-        "Calculate Indice"
+        "Calculate Indice",
+        "Calculate Average"
     );
     public static ComboBox comboboxsimeq = new ComboBox(options);
         

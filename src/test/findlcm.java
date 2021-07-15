@@ -14,8 +14,11 @@ public class findlcm {
         List<Double> doubleList = getar(input);
         for (int i = 0; i<(inputlength-1); i++){
             double a1 = doubleList.get(i),  a2 = doubleList.get(i + 1);
+            System.out.println(a1);
+            System.out.println(a2);
             int gcd = calgcd((int) a1, (int) a2);
             result = (a1*a2)/gcd;
+            doubleList.set(i+1, result);
         }
         return result;
     }
@@ -26,6 +29,7 @@ public class findlcm {
         {
             if(a1%i==0 && a2%i==0)
                 gcd = i;
+            
         }
         return gcd;
     }

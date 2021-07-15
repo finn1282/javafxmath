@@ -12,11 +12,15 @@ public class findgcd {
         int gcd = 1;
         List<Integer> intList = getar(input);
         for (int i = 0; i<(inputlength-1); i++){
+            
             int a1 = intList.get(i),  a2 = intList.get(i + 1);
+            
             for(int is = 1; is <= a1 && is <= a2; is++)
             {
-                if(a1%is==0 && a2%is==0)
-                gcd = is;
+                if(a1%is==0 && a2%is==0){
+                    gcd = is;
+                    intList.set(i, gcd);
+                }
             }
         }
         return gcd;

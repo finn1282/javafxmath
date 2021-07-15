@@ -19,14 +19,15 @@ public class quadstage extends Stage {
     private static GridPane quadoutputsbox = new GridPane();
     private static GridPane quaderrorbox = new GridPane();
     public static Button selectquadbutton = new Button("Select");
-        public static ObservableList<String> options = 
+    public static ObservableList<String> options = 
         FXCollections.observableArrayList(
         "Calculate Points",
         "Calculate LCM",
         "Calculate GCD",
         "Calculate Quadratic Equations",
         "Calculate Simultaneous Equations",
-        "Calculate Indice"
+        "Calculate Indice",
+        "Calculate Average"
     );
     public static ComboBox comboboxquad = new ComboBox(options);
     

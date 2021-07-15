@@ -1,6 +1,8 @@
 package test;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.Scene;
 import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
@@ -14,15 +16,13 @@ public class main extends Application{
     private static final Scene quadscene = quadstage.showstage();
     private static final Scene simeqscene = simeqstage.showstage();
     private static final Scene indicescene = indicestage.showstage();
+    private static final Scene avrgscene = avrgstage.showstage();
     private static int[] xarray = gradientstage.xarray;
     private static int[] yarray = gradientstage.yarray;
     private static XYChart.Series series = graphstage.series;
-    
 
     public static void main(String[] args) {
-        String input = "1, 4, 5, 7, 10, 3, 2, 2";
         launch(args);
-        System.out.println(getavrg.calmode(input));
     }
     
     @Override
@@ -62,7 +62,9 @@ public class main extends Application{
                 primaryStage.setScene(simeqscene);
             } else if (selected == "Calculate Indice") {
                 primaryStage.setScene(indicescene);
-            }
+            } else if (selected == "Calculate Average") {
+                primaryStage.setScene(avrgscene);
+            } 
         });
         gradientstage.selectgradientbutton.setOnAction(e -> {
             String selected = (String) gradientstage.comboboxgradient.getValue();
@@ -78,7 +80,9 @@ public class main extends Application{
                 primaryStage.setScene(simeqscene);
             } else if (selected == "Calculate Indice") {
                 primaryStage.setScene(indicescene);
-            }
+            } else if (selected == "Calculate Average") {
+                primaryStage.setScene(avrgscene);
+            } 
         });
         quadstage.selectquadbutton.setOnAction(e -> {
             String selected = (String) quadstage.comboboxquad.getValue();
@@ -94,7 +98,9 @@ public class main extends Application{
                 primaryStage.setScene(simeqscene);
             } else if (selected == "Calculate Indice") {
                 primaryStage.setScene(indicescene);
-            }
+            } else if (selected == "Calculate Average") {
+                primaryStage.setScene(avrgscene);
+            } 
         });
         lcmstage.selectlcmbutton.setOnAction(e -> {
             String selected = (String) lcmstage.comboboxlcm.getValue();
@@ -110,7 +116,9 @@ public class main extends Application{
                 primaryStage.setScene(simeqscene);
             } else if (selected == "Calculate Indice") {
                 primaryStage.setScene(indicescene);
-            }
+            } else if (selected == "Calculate Average") {
+                primaryStage.setScene(avrgscene);
+            } 
         });
         simeqstage.selectsimeqbutton.setOnAction(e -> {
             String selected = (String) simeqstage.comboboxsimeq.getValue();
@@ -126,7 +134,9 @@ public class main extends Application{
                 primaryStage.setScene(simeqscene);
             } else if (selected == "Calculate Indice") {
                 primaryStage.setScene(indicescene);
-            }
+            } else if (selected == "Calculate Average") {
+                primaryStage.setScene(avrgscene);
+            } 
         });
         indicestage.selectindicebutton.setOnAction(e -> {
             String selected = (String) indicestage.comboboxindice.getValue();
@@ -142,7 +152,27 @@ public class main extends Application{
                 primaryStage.setScene(simeqscene);
             } else if (selected == "Calculate Indice") {
                 primaryStage.setScene(indicescene);
-            }
+            } else if (selected == "Calculate Average") {
+                primaryStage.setScene(avrgscene);
+            } 
+        });
+        avrgstage.selectavrgbutton.setOnAction(e -> {
+            String selected = (String) avrgstage.comboboxavrg.getValue();
+            if (selected == "Calculate Points") {
+                primaryStage.setScene(gradientscene);
+            } else if (selected == "Calculate GCD") {
+                primaryStage.setScene(gcdscene);
+            } else if (selected == "Calculate LCM") {
+                primaryStage.setScene(lcmscene);
+            } else if (selected == "Calculate Quadratic Equations") {
+                primaryStage.setScene(quadscene);
+            } else if (selected == "Calculate Simultaneous Equations") {
+                primaryStage.setScene(simeqscene);
+            } else if (selected == "Calculate Indice") {
+                primaryStage.setScene(indicescene);
+            } else if (selected == "Calculate Average") {
+                primaryStage.setScene(avrgscene);
+            } 
         });
 
 
@@ -151,12 +181,13 @@ public class main extends Application{
     }
 }
 
-// gcdstage, gradientstage, quadstage, lcmstage, simeqstage, indicestage
+// gcdstage, gradientstage, quadstage, lcmstage, simeqstage, indicestage, avrgstage
 /*
     "Calculate Points",
     "Calculate LCM",
     "Calculate GCD",
     "Calculate Quadratic Equations",
     "Calculate Simultaneous Equations",
-    "Calculate Indice"
+    "Calculate Indice",
+    "Calculate Average"
 */

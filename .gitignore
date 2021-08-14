@@ -1,1 +1,7 @@
-/nbproject/private/
+*.class
+*.project
+*.classpath
+*.prefs
+*.properties
+/build
+/nbproject
